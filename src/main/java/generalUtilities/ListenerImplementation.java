@@ -78,10 +78,10 @@ public class ListenerImplementation implements ITestListener{
 		
 		 reports=new ExtentReports();
 		 reports.attachReporter(htm);
-		reports.setSystemInfo("Base Browser", "chrome");
-		reports.setSystemInfo("Base Platform", "window");
+		reports.setSystemInfo("Base Browser", "Chrome");
+		reports.setSystemInfo("Base Platform", "Window");
 		reports.setSystemInfo("Base Environment", "Testing");
-		reports.setSystemInfo("Reporter Name", "ashutosh");
+		reports.setSystemInfo("Reporter Name", "Ashutosh");
 	}
 
 	public void onFinish(ITestContext context) {

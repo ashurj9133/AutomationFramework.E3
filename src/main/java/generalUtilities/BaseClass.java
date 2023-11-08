@@ -34,7 +34,7 @@ public class BaseClass {
     	    
                @BeforeSuite(groups = {"SmokeSuite","RegressionSuite"})
                public void bsConfig() {
-            	   System.out.println("---Open server connection---");
+            	   System.out.println("===Open server connection===");
                }
                //@Parameters("browser")
                //@BeforeTest                   //distributed parellel execution ke liye
@@ -93,11 +93,11 @@ public class BaseClass {
                public void acConfig()
                {
             	  driver.quit();
-            	  System.out.println("---close the browser---");
+            	  System.out.println("---Close the Browser---");
                }
                @AfterSuite(alwaysRun = true)
                public void asconfig()
                {
-            	   System.out.println("---close server connection---");
+            	   System.out.println("===Close Server Connection===");
                }
 }
