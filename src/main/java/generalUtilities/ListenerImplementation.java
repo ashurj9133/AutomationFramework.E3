@@ -20,16 +20,16 @@ public class ListenerImplementation implements ITestListener{
 	public void onTestStart(ITestResult result) {
 		
 		String testscriptName=result.getMethod().getMethodName();
-		System.out.println(testscriptName+"===TestScript execution started");
+		System.out.println(testscriptName+"===TestScript Execution Started===");
 		
 		 test=reports.createTest(testscriptName);
 	}
 
 	public void onTestSuccess(ITestResult result) {
 		String testscriptName=result.getMethod().getMethodName();
-		System.out.println(testscriptName+"===TestScript execution passed");
+		System.out.println(testscriptName+"===TestScript Execution Passed===");
 		//log the success
-		test.log(Status.PASS,testscriptName+"===pass==");
+		test.log(Status.PASS,testscriptName+"===Pass==");
 	}
 
 	public void onTestFailure(ITestResult result) {
@@ -69,7 +69,7 @@ public class ListenerImplementation implements ITestListener{
 	}
 
 	public void onStart(ITestContext context) {
-		System.out.println("===Suite Execution started==");
+		System.out.println("===Suite Execution Started===");
 		ExtentSparkReporter htm=new ExtentSparkReporter(".\\ExtentReports\\Report"+new JavaUtility().getSystemData()+".html");
 		htm.config().setTheme(Theme.DARK);
 		htm.config().setDocumentTitle("Execution Report");
@@ -85,7 +85,7 @@ public class ListenerImplementation implements ITestListener{
 	}
 
 	public void onFinish(ITestContext context) {
-		System.out.println("==suite execution finish==");
+		System.out.println("===Suite Execution Finish===");
 		reports.flush();
 		
 	}
